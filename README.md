@@ -1,5 +1,5 @@
 # SwiftUIWithSVG
-User sag file with swift
+Use svg file with swift
 ---
 
 ### 直接暴力使用SVG檔案

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        self.svgToImg(svgNamed: "tab_home2", preImgNamed: "house.fill")
+        self.svgToImg(svgNamed: "tab_home", preImgNamed: "house.fill")
             .padding()
             .background(Color.red)
             .cornerRadius(30)
@@ -19,7 +19,13 @@ struct ContentView: View {
         guard let uiImg = UIImage(named: svgNamed) else {
             return Image(systemName: preImgNamed)
         }
-        return Image(uiImage: uiImg)
+        let width: CGFloat = 28
+        let size = CGSize(width: width, height: uiImg.size.height * width / uiImg.size.width)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let newImg = renderer.image { (context) in
+            uiImg.draw(in: renderer.format.bounds)
+        }
+        return Image(uiImage: newImg)
     }
 }
 

@@ -1,14 +1,25 @@
-# SwiftUIWithSVG
-Use svg file with swift
----
+### 更新
 
-### 直接暴力使用SVG檔案
+可以直接使用svg檔案, 調整下面設定可以直接用foregroundColor調整顏色.
 
-Image(uiImage: UIImage(named: "tab_home")!)
+![settingSvgImage.png](https://github.com/NullRa/SwiftUIWithSVG/blob/main/settingSvgImage.png?raw=true)
 
-### 加入一個備用檔案避免optional crash
+### 專案下載
 
-包裝成一個svgToImg function
+[https://github.com/NullRa/SwiftUIWithSVG/blob/main/README.md](https://github.com/NullRa/SwiftUIWithSVG/blob/main/README.md)
+
+## 直接用比較簡單 以下都僅供參考
+
+
+
+
+### ~~直接暴力使用SVG檔案~~
+
+~~Image(uiImage: UIImage(named: "tab_home")!)~~
+
+### ~~加入一個備用檔案避免optional crash~~
+
+~~包裝成一個svgToImg function~~
 
 ```swift
 private func svgToImg(svgNamed:String, preImgNamed:String) -> Image {
@@ -19,7 +30,7 @@ private func svgToImg(svgNamed:String, preImgNamed:String) -> Image {
     }
 ```
 
-使用svgToImg function
+~~使用svgToImg function~~
 
 ```swift
 self.svgToImg(svgNamed: "tab_home2", preImgNamed: "house.fill")
@@ -28,9 +39,9 @@ self.svgToImg(svgNamed: "tab_home2", preImgNamed: "house.fill")
             .cornerRadius(30)
 ```
 
-### 更進階的用法
+### ~~更進階的用法~~
 
-調整svg檔案的圖片大小
+~~調整svg檔案的圖片大小~~
 
 ```swift
 private func svgToImg(svgNamed:String, preImgNamed:String) -> Image {
@@ -47,6 +58,6 @@ private func svgToImg(svgNamed:String, preImgNamed:String) -> Image {
     }
 ```
 
-### 未解決的問題
+### ~~未解決的問題~~
 
-無法直接調整svg檔案顏色,查過有個套件svgKit可以使用,有這方面需求可以往這方向去找答案.
+~~無法直接調整svg檔案顏色,查過有個套件svgKit可以使用,有這方面需求可以往這方向去找答案.~~

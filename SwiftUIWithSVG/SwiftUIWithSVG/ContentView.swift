@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Image(uiImage: UIImage(named: "tab_home")!)
             .padding()
+            .background(Color.red)
+            .cornerRadius(30)
     }
 }
 

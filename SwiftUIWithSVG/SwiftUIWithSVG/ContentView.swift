@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(uiImage: UIImage(named: "tab_home")!)
+        self.svgToImg(svgNamed: "tab_home2", preImgNamed: "house.fill")
             .padding()
             .background(Color.red)
             .cornerRadius(30)
+    }
+    
+    private func svgToImg(svgNamed:String, preImgNamed:String) -> Image {
+        guard let uiImg = UIImage(named: svgNamed) else {
+            return Image(systemName: preImgNamed)
+        }
+        return Image(uiImage: uiImg)
     }
 }
 
